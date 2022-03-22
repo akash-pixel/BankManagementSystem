@@ -1,12 +1,13 @@
 public class User {
     private int id;
-    private String password;
+    private String password, name;
     private int mobileNum;
     private double balance;
 
-    User(int id, String password) {
+    User(int id, String password, String name) {
         this.id = id;
         this.password = password;
+        this.name = name;
         this.balance = 500;
     }
 
@@ -44,6 +45,10 @@ public class User {
 
     public boolean verifyPassword(String password) {
         return this.password.equals(password);
+    }
+
+    public String getName() {
+        return this.name;
     }
 
 }
